@@ -17,10 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "npm run build && gh-pages -d build",
+    "build": "cross-env PUBLIC_URL=/homepage react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "gh-pages": "^4.0.0"
   }
 }
